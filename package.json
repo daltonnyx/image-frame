@@ -1,0 +1,18 @@
+{
+  "name": "image-frame-tool",
+  "version": "1.0.0-alpha",
+  "description": "Image Frame Tool for Facebook",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src --preset es2015 --out-dir dist --watch",
+    "webpack": "webpack ./dist/* --output-path js --output-filename bundle.js -w"
+  },
+  "author": "Dalton Nyx",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^2.5.1"
+  }
+}
