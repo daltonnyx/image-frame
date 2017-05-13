@@ -2,12 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <script src="http://livejs.com/live.js"></script>
+    <title>Image Frame</title>
 </head>
 <body>
     
+    <div id="frame-list">
+        <ul class="list">
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+        </ul>
+    </div>
 
+    <div id="canvas-container">
+        <canvas id="frame" width="800" height="600"></canvas>
+    </div>
+    <div class="action-controls">
+        <input type="file" id="upload" />
+    </div>
+    <style type="text/css">
+        #frame {
+            border: 1px solid #ccc;
+        }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.11/fabric.js"></script>
 <script src="js/bundle.js"></script>
 </body>
 </html>
