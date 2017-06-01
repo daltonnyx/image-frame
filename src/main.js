@@ -7,7 +7,7 @@ var patternSourceCanvas = new fabric.StaticCanvas();
 
 var frame, framepoly, frameimage;
 
-fabric.Image.fromURL('frames/saturdy.png', img => {
+fabric.Image.fromURL('frames/frame1.png', img => {
     frame = img;
     frame.scaleToHeight(canvas.getHeight());
     canvas.setWidth(frame.getWidth());
@@ -99,3 +99,22 @@ saveButton.addEventListener('click',evt => {
     document.body.removeChild(downloadAnchor);
 },false);
 
+
+
+//Change frame
+
+var frameArr = document.querySelectorAll("#frame-container ul li a");
+
+frameArr.forEach(link => {link.addEventListener("click", changeFrameHandler, false)});
+
+
+function changeFrameHandler(evt) {
+    evt.preventDefault();
+    var frameSrc = this.getAttribute("data-src");
+    fabric.Image.fromURL(frameSrc, img => {
+        frame = img;
+        frame.scaleToHeight(canvas.getHeight());
+        canvas.setWidth(frame.getWidth());
+        canvas.setOverlayImage(frame, canvas.renderAll.bind(canvas));   
+    });
+}
